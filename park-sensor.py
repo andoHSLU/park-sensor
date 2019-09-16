@@ -4,7 +4,8 @@ def receiveSignal(signalNumber, frame):
     print "Exit Python!"
     ########## YOUR CODE GOES HERE ##########
 
-    grovepi.ledBar_setLevel(port_ledbar, 0)
+    # TODO: Turnoff all lights when exit
+    # grovepi.ledBar_setLevel(port_ledbar, 0)
 
     ########## YOUR CODE ENDS HERE ##########
     os._exit(0)
@@ -13,8 +14,8 @@ signal.signal(signal.SIGINT, receiveSignal)
 ########## YOUR CODE GOES HERE ##########
 import grovepi
 
-port_ledbar = 5
-port_ranger = 4
+port_ledbar = # FIXME: Put Ledbar to grovepi connector 5
+port_ranger = # FIXME: Put Ledbar to grovepi connector 4
 
 grovepi.ledBar_init(port_ledbar, 0)
 grovepi.ledBar_orientation(port_ledbar, 1)
